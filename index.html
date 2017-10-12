@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="://www.w3.org/1999/xhtml">
+<head> 
+<meta -equiv="content-type" content="text/html; charset=utf-8"/> 
+<title>Akihabara</title>
+<script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script> 
+<script type="text/javascript">
+  function updatemap(geo1, geo2) {
+    var fenway = new google.maps.LatLng(geo1,geo2);
+    var mapOptions = {
+      center: fenway,
+      zoom: 17,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      streetViewControl: true
+    };
+    
+    var map = new google.maps.Map(
+        document.getElementById("map_canvas"), mapOptions);
+    
+    var marker = new google.maps.Marker({
+      position: fenway, 
+      map: map, 
+    }); 
+
+  }
+</script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.youtubeplaylist.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+		$(function() {
+			$("ul.demo1").ytplaylist();
+		});
+		
+		$("#contenu").load("store1.html");
+		
+		$("li a").click(function(){
+			var id = $(this).attr("id");
+			$("#contenu").load(id+".html");
+			window.scrollTo(0, $("#anchor").position().top);
+		});
+		
+});
+</script>
+<style type="text/css">
+div#container
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+}
+#ytvideo {
+    float: left;
+	margin-right:15px;
+}
+.yt_holder {
+    background: #f3f3f3;
+    padding: 10px;
+    float: left;
+    border: 1px solid #e3e3e3;
+	margin-bottom:15px;
+}
+ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 135px;
+}
+ul li {
+    list-style-type: none;
+    display:block;
+    background: #f1f1f1;
+    float: left;
+    width: 130px;
+    margin-bottom: 2px;
+	padding:1px;
+
+}
+ul li img {
+    width: 120px;
+    float: left;
+    margin-right: 5px;
+    border: 1px solid #999;
+}
+ul li a {
+    font-family: georgia;
+    font-size: 11px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    
+}
+#contenu {
+    font-family: georgia;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    
+}
+.currentvideo {
+	background: #e6e6e6;
+}
+</style>
+</head> 
+<body onload="updatemap(35.698234,139.772412,11.25,12)">
+<div id="container">
+<div><a href="://www.tokyohackerspace.org/"><img src="ths_logo.png" width="260" height="103" border="0"></a></div>
+<a id="anchor"></a>
+<div class="yt_holder">
+    	<div id="ytvideo"></div>
+        <ul class="demo1">
+       
+            <li><a href="https://www.youtube.com/watch?v=bhdqW_lMjjM" id="store1" onclick="javascript:updatemap(35.698234,139.772412,11.25,12);">Introduction</a></li>
+            <li><a href="https://www.youtube.com/watch?v=oyQfKN8vZaE" id="store2" onclick="javascript:updatemap(35.698281,139.771789);">Akihabara Radio Center</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ZKmwIBfT5U4" id="store9" onclick="javascript:updatemap(35.69875,139.770859);">Akihabara Radio Department Store</a></li>
+            <li><a href="https://www.youtube.com/watch?v=XGPddaXFkXU" id="store4" onclick="javascript:updatemap(35.698377,139.769987);">Keisokuki-Land</a></li>
+            <li><a href="https://www.youtube.com/watch?v=GKW0pf2wSc0" id="store5" onclick="javascript:updatemap(35.698745,139.770456);">Nishikawa Parts</a></li>
+            <li><a href="https://www.youtube.com/watch?v=aURuFaggn_I" id="store12" onclick="javascript:updatemap(35.699329,139.770207);">Sengoku 1</a></li>
+            <li><a href="https://www.youtube.com/watch?v=sdM-KRDehg8" id="store13" onclick="javascript:updatemap(35.699329,139.770207);">Sengoku 2</a></li>
+            <li><a href="https://www.youtube.com/watch?v=zbkVwI40WsQ" id="store14" onclick="javascript:updatemap(35.699347,139.769799);">Akizuki Denshi</a></li>
+            <li><a href="https://www.youtube.com/watch?v=PnlSzvgo4wY" id="store18" onclick="javascript:updatemap(35.70098,139.770845);">Marutsu - Main Store</a></li>
+            <li><a href="https://www.youtube.com/watch?v=nVPbZ1fWTTo" id="store15" onclick="javascript:updatemap(35.699497,139.769469);">Marutsu - 2nd Store</a></li>
+            <li><a href="https://www.youtube.com/watch?v=RJojLVt9au8" id="store16" onclick="javascript:updatemap(35.698196,139.770306);">Suzusho</a></li>    
+            <li><a href="https://www.youtube.com/watch?v=awkNgHVOW0M" id="store24" onclick="javascript:updatemap(35.699562,139.769306);">Super Junk</a></li>       
+            <li><a href="https://www.youtube.com/watch?v=vvZKcXxdJCo" id="store6" onclick="javascript:updatemap(35.698728,139.770443);">V-Stone</a></li>
+            <li><a href="https://www.youtube.com/watch?v=958sneJTLQw" id="store17" onclick="javascript:updatemap(35.69956,139.769289);">RT Robots</a></li>
+            <li><a href="https://www.youtube.com/watch?v=8ScbZuQDeZ8" id="store7" onclick="javascript:updatemap(35.698728,139.770443);">Rocket Radio</a></li>
+            <li><a href="https://www.youtube.com/watch?v=phrhuGfYvwU" id="store8" onclick="javascript:updatemap(35.698538,139.77095);">Oyaide</a></li>  
+            <li><a href="https://www.youtube.com/watch?v=yX2R0nCAHic" id="store10" onclick="javascript:updatemap();">Hirose Technical</a></li> 
+            <li><a href="https://www.youtube.com/watch?v=4Ohnn0--6mI" id="store22" onclick="javascript:updatemap(35.700161,139.771655);">Suzuden</a></li>
+            <li><a href="https://www.youtube.com/watch?v=JdTU5yh_Sfc" id="store23" onclick="javascript:updatemap(35.699414,139.771583);">Sakaguchi</a></li>
+            <li><a href="https://www.youtube.com/watch?v=4xqNqDJBzmo" id="store21" onclick="javascript:updatemap(35.702673,139.771966);">SuperCom</a></li>
+            <li><a href="https://www.youtube.com/watch?v=UEhaPBx3oa4" id="store20" onclick="javascript:updatemap(35.704178,139.77048);">3331 Chiyoda Arts</a></li>
+            <li><a href="https://www.youtube.com/watch?v=FQAvB0z3FbM" id="store11" onclick="javascript:updatemap(35.699377,139.770668);">Super Potato</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ibml0bSt9jA" id="store3" onclick="javascript:updatemap(35.698131,139.772068);">Asobit</a></li>
+        </ul>
+    </div>
+<div style="clear:both;"></div>
+
+<div class="yt_holder">
+<div id="map_canvas" style="float: left; width: 430px; height: 300px; margin-right: 10px;"></div> 
+<div id="pano" style="float: left; width: 430px; height: 300px;"><span id="contenu">More information</span></div>
+</div>
+
+<div style="clear:both;"></div>
+<div class="yt_holder" style="width: 870px; text-align: center; font-family: georgia; font-size: 12px;">
+by Akiba from <a href="://freaklabs.org">Freaklabs</a> & psc from <a href="http://www.workinprogress.ca">workinprogress</a>
+</div>
+<div style="clear:both;"></div>
+
+</div>
+</body> 
+</html> 
